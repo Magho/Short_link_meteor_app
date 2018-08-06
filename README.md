@@ -1,5 +1,5 @@
 # Short_link_meteor_app
-This contain a simple project allow users to vote on different topics using their accounts .
+This contain a simple project allow users to create and save links .
 ## Getting startted
 Instructions on how to get a copy of these simple projects and make them run on your local machine
 ### Perequisties
@@ -16,5 +16,5 @@ Instructions on how to get a copy of these simple projects and make them run on 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 ###### These challenges are under MIT license
 Copyright (c) 2018 Mohamed el-Maghraby
-[LICENSE.md](https://github.com/Magho/Score-keeper-app/blob/master/LICENSE)
+[LICENSE.md](https://github.com/Magho/Short_link_meteor_app/blob/master/LICENSE)
 
