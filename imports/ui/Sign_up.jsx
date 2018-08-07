@@ -17,13 +17,17 @@ export default class Sign_up extends React.Component {
         let email = this.refs.email.value.trim();
         let password = this.refs.password.value.trim();
 
-        Accounts.createUser({ email, password}, (err) => {
-            console.log("Sign_up callback", err);
-        });
+        if (password.length < 9) {
+            return this.setState({error : 'Password must be more than 9 character'})
+        }
 
-        /*this.setState({
-            error : "something went wrong!",
-        })*/
+        Accounts.createUser({ email, password}, (err) => {
+            if (err) {
+                this.setState({error : err.reason});
+            } else {
+                this.setState({error : ''});
+            }
+        });
     }
 
     render() {
@@ -33,7 +37,7 @@ export default class Sign_up extends React.Component {
 
                 {this.state.error ? <p> {this.state.error} </p> : undefined}
 
-                <form onSubmit={this.onSubmit.bind(this)}>
+                <form onSubmit={this.onSubmit.bind(this)} noValidate>
                     <input type="email" ref="email" name="email" placeholder="E-mail"/>
                     <input type="password" ref="password" name="password" placeholder="Password"/>
                     <button> Create account </button>
