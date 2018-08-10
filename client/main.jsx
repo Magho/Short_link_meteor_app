@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Redirect, BrowserRouter as Router, Route , Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import {Tracker} from 'meteor/tracker';
+import '../imports/startup/simple_schema_config';
 // Get the current location.
 const history = createHistory();
 
@@ -14,10 +15,9 @@ import NotFound from "../imports/ui/NotFound";
 
 const unAuthenticatedPages = ['/', '/Sign_up'];
 const authenticatedPages = ['/Links'];
-let routes;
 Tracker.autorun(() => {
 
-    routes = (
+    const routes = (
         <Router>
             <Switch>
                 <Route exact path="/" render={() =>  (Meteor.userId() ? <Redirect to={{
@@ -47,11 +47,14 @@ Tracker.autorun(() => {
     } else if (isAuthenticatedpage && !isAuthenticated) {
         history.replace('/');
     }
+
+    Meteor.startup(() => {
+
+        ReactDOM.render(routes , document.getElementById('app'));
+    });
 });
 
-Meteor.startup(() => {
-    ReactDOM.render(routes , document.getElementById('app'));
-});
+
 
 
 
