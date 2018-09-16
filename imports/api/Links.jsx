@@ -1,6 +1,7 @@
 import {Meteor} from 'meteor/meteor';
 import {Mongo} from "meteor/mongo";
 import SimpleSchema from "simpl-schema";
+import shortid  from 'shortid';
 
 export const LinksAPI = new Mongo.Collection('links');
 
@@ -27,8 +28,11 @@ Meteor.methods({
 
         LinksAPI.insert({
             url,
+            _id : shortid.generate(),
             userId : this.userId,
-            visible : true
+            visible : true,
+            visitedCount:0,
+            lastVisitedAt:null
         })
     },
     'links.setVisibility'(_id, visible){
@@ -47,6 +51,20 @@ Meteor.methods({
         },
         {
             $set:{ visible } 
+        });
+    },
+    'links.trackVisit'(_id){
+        new SimpleSchema({
+            _id : {type : String, min:1}
+        }).validate({_id});
+
+        LinksAPI.update({_id}, {
+            $set : {
+                lastVisitedAt : new Date().getTime()
+            },
+            $inc : {
+                visitedCount : 1
+            }
         });
     }
 });

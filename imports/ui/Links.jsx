@@ -1,7 +1,7 @@
 import React from "react";
-import LinkList from "./LinksList";
 import {Meteor} from 'meteor/meteor';
 
+import LinkList from "./LinksList";
 import PrivateHeader from './PrivateHeader';
 import AddLinks from './AddLinks';
 import LinksListFilters from './LinksListFilters';
@@ -12,8 +12,8 @@ export default () => {
         <div>
             <PrivateHeader title = "Your Links"/>
             <LinksListFilters />
-            <LinkList/>
             <AddLinks/>
+            <LinkList/>
         </div>
     );
 };
