@@ -18,3 +18,4 @@ tracker@1.2.0                 # Meteor's client-side reactive programming librar
 react-meteor-data
 accounts-password
 webapp
+session

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Redirect, BrowserRouter as Router, Route , Switch} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
 import {Tracker} from 'meteor/tracker';
+import { Session } from 'meteor/session';
 import '../imports/startup/simple_schema_config';
 // Get the current location.
 const history = createHistory();
@@ -49,7 +50,7 @@ Tracker.autorun(() => {
     }
 
     Meteor.startup(() => {
-
+        Session.set('showVisible', true);
         ReactDOM.render(routes , document.getElementById('app'));
     });
 });
