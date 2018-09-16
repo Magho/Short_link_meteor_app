@@ -17,3 +17,4 @@ shell-server@0.3.1            # Server-side component of the `meteor shell` comm
 tracker@1.2.0                 # Meteor's client-side reactive programming library
 react-meteor-data
 accounts-password
+webapp
