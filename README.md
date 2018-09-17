@@ -22,7 +22,7 @@ This contain a simple project allow users to create and save links .
 * [react-flip-move](https://github.com/joshwcomeau/react-flip-move) - This module was built to tackle the common but arduous problem of animating a list of items when the list's order changes.
 * [clipboard.js](https://github.com/zenorocha/clipboard.js/) - A modern approach to copy text to clipboard ... No Flash. No frameworks. Just 3kb gzipped.
 * [moment](https://github.com/moment/moment) - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
-* [react-router](https://github.com/ReactTraining/react-router) - .
+* [react-router](https://github.com/ReactTraining/react-router) - Declarative routing for React.
 * [history](https://github.com/ReactTraining/history) - is a JavaScript library that lets you easily manage session history anywhere JavaScript runs. history abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.
 
 #### meteor packages
