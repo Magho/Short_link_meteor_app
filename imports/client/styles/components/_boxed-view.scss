@@ -1,0 +1,20 @@
+.boxed-view {
+	align-items : center;
+	background: $boxed-view-bg;
+	display: flex;
+	justify-content:center;
+	width: 100vw; // view port width
+	height: 100vh; // view port height
+}
+
+.boxed-view__box {
+	background-color: $boxed-view-box-bg;
+	padding: 2.4rem;
+	text-align: center;
+	width : 24rem;
+}
+
+.boxed-view__form {
+	display:flex;
+	flex-direction:column;
+}
