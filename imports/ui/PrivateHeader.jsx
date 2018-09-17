@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 export default PrivateHeader = (props) => {
 
 	return (
-		<div>
-			<h1> {props.title} </h1>
-            <button> <Link to="/" onClick={() => Accounts.logout()}>logout</Link> </button>
+		<div className="header">
+			<div className="header__content">
+				<h1 className="header__title"> {props.title} </h1>
+	            <button className="button button__link-text"> <Link style={{color:'white'}}to="/" onClick={() => Accounts.logout()}>logout</Link> </button>
+			</div>
 		</div>
 	);
 };

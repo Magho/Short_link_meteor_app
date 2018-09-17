@@ -35,6 +35,9 @@ Meteor.methods({
             lastVisitedAt:null
         })
     },
+    'links.delete'(_id){
+        LinksAPI.remove({_id});
+    },
     'links.setVisibility'(_id, visible){
         if (!this.userId){
             throw new Meteor.Error('not Authorized');
