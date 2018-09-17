@@ -23,7 +23,7 @@ This contain a simple project allow users to create and save links .
 * [clipboard.js](https://github.com/zenorocha/clipboard.js/) - A modern approach to copy text to clipboard ... No Flash. No frameworks. Just 3kb gzipped.
 * [moment](https://github.com/moment/moment) - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
 * [react-router](https://github.com/ReactTraining/react-router) - .
-* [history] (https://github.com/ReactTraining/history) - is a JavaScript library that lets you easily manage session history anywhere JavaScript runs. history abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.
+* [history](https://github.com/ReactTraining/history) - is a JavaScript library that lets you easily manage session history anywhere JavaScript runs. history abstracts away the differences in various environments and provides a minimal API that lets you manage the history stack, navigate, confirm navigation, and persist state between sessions.
 
 #### meteor packages
 
@@ -31,6 +31,7 @@ This contain a simple project allow users to create and save links .
 * [account-base](https://github.com/meteor/meteor/tree/devel/packages/accounts-base) - Meteor's user account system. This package implements the basic functions necessary for user accounts and lets other packages register login services. Some of these services are in the following packages:.
 * [tracker](https://github.com/meteor/meteor/tree/master/packages/tracker) - Meteor Tracker is an incredibly tiny (~1k) but incredibly powerful library for transparent reactive programming in JavaScript.
 * [wepapp](https://github.com/meteor/meteor/tree/devel/packages/webapp) - The webapp package contains the core functionality that makes a Meteor project into a web application. It is a "value added HTTP server" that includes not just a web server, but also advanced app serving functionality like over-the-air mobile app updates and HTML5 Appcache support. For more information, see the Webapp project page.
+* [mongo](https://github.com/meteor/meteor/tree/devel/packages/mongo) - The mongo package is a full stack database driver that provides several paramount pieces of functionality to work with MongoDB in Meteor.
 
 ## Running
 
